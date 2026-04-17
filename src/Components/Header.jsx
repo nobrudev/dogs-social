@@ -15,12 +15,10 @@ const Header = () => {
         </Link>
         {data ? (
           <Link className={styles.login} to="/conta">
-            {" "}
             {data.nome}
           </Link>
         ) : (
           <Link className={styles.login} to="/login">
-            {" "}
             Login / Criar
           </Link>
         )}

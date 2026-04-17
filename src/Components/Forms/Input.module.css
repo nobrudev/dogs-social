@@ -1,11 +1,11 @@
 .wrapper {
-  margin-bottom: 1rem; /*separa os elementos*/
+  margin-bottom: 1rem;
 }
 
 .input {
   border: 1px solid #eee;
   display: block;
-  width: 100%; /*define sempre como 100% o padrao do container*/
+  width: 100%;
   font-size: 1rem;
   padding: 0.8rem;
   border-radius: 0.4rem;
