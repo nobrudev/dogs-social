@@ -5,15 +5,15 @@ const useFetch = () => {
   const [error, setError] = React.useState(null);
   const [loading, setLoading] = React.useState(false);
 
-  const request = React.useCallback(async (URL, options) => {
+  const request = React.useCallback(async (url, options) => {
     let response;
     let json;
     try {
       setError(null);
       setLoading(true);
-      response = await fetch(URL, options);
+      response = await fetch(url, options);
       json = await response.json();
-      if (response.ok === false) throw new Error(json.message);
+      if (!response.ok) throw new Error(json.message);
     } catch (err) {
       json = null;
       setError(err.message);
@@ -22,7 +22,7 @@ const useFetch = () => {
       setLoading(false);
       return { response, json };
     }
-  });
+  }, []); // dependências estáveis, não causam recriação
 
   return {
     data,
