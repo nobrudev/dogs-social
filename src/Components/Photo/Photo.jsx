@@ -1,6 +1,6 @@
 import React from "react";
 
-const Photo = ({ photo }) => {
+const Photo = () => {
   return <div></div>;
 };
 

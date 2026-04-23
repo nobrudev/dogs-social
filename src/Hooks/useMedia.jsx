@@ -1,21 +1,21 @@
-// src/Hooks/useMedia.jsx
 import React from "react";
 
-function useMedia(media) {
-  const [match, setMatch] = React.useState(
-    () => window.matchMedia(media).matches,
-  );
+const useMedia = (media) => {
+  const [match, setMatch] = React.useState(null);
 
   React.useEffect(() => {
-    const mediaQueryList = window.matchMedia(media);
-
-    const listener = (event) => setMatch(event.matches);
-
-    mediaQueryList.addEventListener("change", listener);
-    return () => mediaQueryList.removeEventListener("change", listener);
+    function changeMatch() {
+      const { matches } = window.matchMedia(media);
+      setMatch(matches);
+    }
+    changeMatch();
+    window.addEventListener("resize", changeMatch);
+    return () => {
+      window.removeEventListener("resize", changeMatch);
+    };
   }, [media]);
 
   return match;
-}
+};
 
 export default useMedia;

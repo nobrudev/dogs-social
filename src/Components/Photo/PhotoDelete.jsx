@@ -18,7 +18,7 @@ const PhotoDelete = ({ id }) => {
   return (
     <>
       {loading ? (
-        <button disabled className={styles.delete}>
+        <button className={styles.delete} disabled>
           Deletar
         </button>
       ) : (

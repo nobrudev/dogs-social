@@ -103,7 +103,6 @@ export function PHOTO_DELETE(id) {
     options: {
       method: "DELETE",
       headers: {
-        "Content-Type": "application/json",
         Authorization: "Bearer " + window.localStorage.getItem("token"),
       },
     },

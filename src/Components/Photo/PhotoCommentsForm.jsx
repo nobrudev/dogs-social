@@ -1,5 +1,5 @@
 import React from "react";
-import enviar from "/src/Assets/enviar.svg";
+import Enviar from "../../Assets/enviar.svg?react";
 import useFetch from "../../Hooks/useFetch";
 import Error from "../Helper/Error";
 import { COMMENT_POST } from "../../Api";
@@ -15,7 +15,7 @@ const PhotoCommentsForm = ({ id, setComments }) => {
     const { response, json } = await request(url, options);
     if (response.ok) {
       setComment("");
-      setComments((prev) => [...prev, json]);
+      setComments((comments) => [...comments, json]);
     }
   }
 
@@ -30,7 +30,7 @@ const PhotoCommentsForm = ({ id, setComments }) => {
         onChange={({ target }) => setComment(target.value)}
       />
       <button className={styles.button}>
-        <img src={enviar} alt="Enviar" />
+        <Enviar />
       </button>
       <Error error={error} />
     </form>

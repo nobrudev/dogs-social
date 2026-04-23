@@ -20,7 +20,7 @@ const types = {
 const useForm = (type) => {
   const [value, setValue] =
     React.useState(""); /*seta o valor do campo de formulario*/
-  const [error, setError] = React.useState("");
+  const [error, setError] = React.useState(null);
 
   function validate(value) {
     if (type === false) return true;
