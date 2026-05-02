@@ -1,7 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import useFetch from "../../Hooks/useFetch";
-import { PHOTO_GET } from "../../Api";
+import { PHOTO_GET } from "../../Api.jsx";
 import Error from "../Helper/Error";
 import Loading from "../Helper/Loading";
 import PhotoContent from "./PhotoContent";
