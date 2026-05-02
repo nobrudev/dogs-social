@@ -1,7 +1,7 @@
 import React from "react";
 import FeedPhotosItem from "./FeedPhotosItem";
 import useFetch from "../../Hooks/useFetch";
-import { PHOTOS_GET } from "../../Api";
+import { PHOTOS_GET } from "../../Api.jsx";
 import Error from "../Helper/Error";
 import Loading from "../Helper/Loading";
 import styles from "./FeedPhotos.module.css";

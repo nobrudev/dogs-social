@@ -2,7 +2,7 @@ import React from "react";
 import Enviar from "../../Assets/enviar.svg";
 import useFetch from "../../Hooks/useFetch";
 import Error from "../Helper/Error";
-import { COMMENT_POST } from "../../Api";
+import { COMMENT_POST } from "../../Api.jsx";
 import styles from "./PhotoCommentsForm.module.css";
 
 const PhotoCommentsForm = ({ id, setComments, single }) => {
